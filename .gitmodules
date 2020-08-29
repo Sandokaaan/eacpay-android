@@ -2,5 +2,5 @@
 	path = app/src/main/secp/secp256k1
 	url = https://github.com/bitcoin-core/secp256k1.git
 [submodule "app/src/main/jni/eacpay-core"]
-	path = app/src/main/jni/eacpay-core
+	path = app/src/main/jni/loafwallet-core
 	url = https://github.com/vcexnet/eacpay-core.git
