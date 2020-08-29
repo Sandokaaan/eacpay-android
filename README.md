@@ -65,6 +65,7 @@ Simplicity and ease-of-use is **Eacpay wallet**'s core design principle. A simpl
 4. Clone this repo & init submodules
 ```bash
 $ git clone https://github.com/vcexnet/eacpay-android
+$ cd eacpay-android
 $ git submodule init
 $ git submodule update
 ```
