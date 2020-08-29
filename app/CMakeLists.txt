@@ -27,39 +27,39 @@ add_library( # Specifies the name of the library.
              SHARED
 
              # Provides a relative path to your source file(s).
-             src/main/jni/loafwallet-core/BRAddress.c
-             src/main/jni/loafwallet-core/BRAddress.h
-             src/main/jni/loafwallet-core/BRArray.h
-             src/main/jni/loafwallet-core/BRBase58.c
-             src/main/jni/loafwallet-core/BRBase58.h
-             src/main/jni/loafwallet-core/BRBIP32Sequence.c
-             src/main/jni/loafwallet-core/BRBIP32Sequence.h
-             src/main/jni/loafwallet-core/BRBIP38Key.c
-             src/main/jni/loafwallet-core/BRBIP38Key.h
-             src/main/jni/loafwallet-core/BRBIP39Mnemonic.c
-             src/main/jni/loafwallet-core/BRBIP39Mnemonic.h
-             src/main/jni/loafwallet-core/BRBIP39WordsEn.h
-             src/main/jni/loafwallet-core/BRBloomFilter.c
-             src/main/jni/loafwallet-core/BRBloomFilter.h
-             src/main/jni/loafwallet-core/BRCrypto.c
-             src/main/jni/loafwallet-core/BRCrypto.h
-             src/main/jni/loafwallet-core/BRInt.h
-             src/main/jni/loafwallet-core/BRKey.c
-             src/main/jni/loafwallet-core/BRKey.h
-             src/main/jni/loafwallet-core/BRMerkleBlock.c
-             src/main/jni/loafwallet-core/BRMerkleBlock.h
-             src/main/jni/loafwallet-core/BRPaymentProtocol.c
-             src/main/jni/loafwallet-core/BRPaymentProtocol.h
-             src/main/jni/loafwallet-core/BRPeer.c
-             src/main/jni/loafwallet-core/BRPeer.h
-             src/main/jni/loafwallet-core/BRPeerManager.c
-             src/main/jni/loafwallet-core/BRPeerManager.h
-             src/main/jni/loafwallet-core/BRSet.c
-             src/main/jni/loafwallet-core/BRSet.h
-             src/main/jni/loafwallet-core/BRTransaction.c
-             src/main/jni/loafwallet-core/BRTransaction.h
-             src/main/jni/loafwallet-core/BRWallet.c
-             src/main/jni/loafwallet-core/BRWallet.h
+             src/main/jni/eacpay-core/BRAddress.c
+             src/main/jni/eacpay-core/BRAddress.h
+             src/main/jni/eacpay-core/BRArray.h
+             src/main/jni/eacpay-core/BRBase58.c
+             src/main/jni/eacpay-core/BRBase58.h
+             src/main/jni/eacpay-core/BRBIP32Sequence.c
+             src/main/jni/eacpay-core/BRBIP32Sequence.h
+             src/main/jni/eacpay-core/BRBIP38Key.c
+             src/main/jni/eacpay-core/BRBIP38Key.h
+             src/main/jni/eacpay-core/BRBIP39Mnemonic.c
+             src/main/jni/eacpay-core/BRBIP39Mnemonic.h
+             src/main/jni/eacpay-core/BRBIP39WordsEn.h
+             src/main/jni/eacpay-core/BRBloomFilter.c
+             src/main/jni/eacpay-core/BRBloomFilter.h
+             src/main/jni/eacpay-core/BRCrypto.c
+             src/main/jni/leacpay-core/BRCrypto.h
+             src/main/jni/eacpay-core/BRInt.h
+             src/main/jni/eacpay-core/BRKey.c
+             src/main/jni/eacpay-core/BRKey.h
+             src/main/jni/eacpay-core/BRMerkleBlock.c
+             src/main/jni/eacpay-core/BRMerkleBlock.h
+             src/main/jni/eacpay-core/BRPaymentProtocol.c
+             src/main/jni/eacpay-core/BRPaymentProtocol.h
+             src/main/jni/eacpay-core/BRPeer.c
+             src/main/jni/eacpay-core/BRPeer.h
+             src/main/jni/eacpay-core/BRPeerManager.c
+             src/main/jni/eacpay-core/BRPeerManager.h
+             src/main/jni/eacpay-core/BRSet.c
+             src/main/jni/eacpay-core/BRSet.h
+             src/main/jni/eacpay-core/BRTransaction.c
+             src/main/jni/eacpay-core/BRTransaction.h
+             src/main/jni/eacpay-core/BRWallet.c
+             src/main/jni/eacpay-core/BRWallet.h
 
              src/main/jni/transition/core.c
              src/main/jni/transition/core.h
@@ -75,7 +75,7 @@ add_library( # Specifies the name of the library.
              src/main/jni/transition/wallet.h)
 
 
-include_directories(src/main/jni/loafwallet-core/)
+include_directories(src/main/jni/eacpay-core/)
 include_directories(src/main/secp/secp256k1/include/)
 include_directories(src/main/secp/secp256k1/src/)
 include_directories(src/main/secp/secp256k1/)
