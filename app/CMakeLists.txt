@@ -42,7 +42,7 @@ add_library( # Specifies the name of the library.
              src/main/jni/eacpay-core/BRBloomFilter.c
              src/main/jni/eacpay-core/BRBloomFilter.h
              src/main/jni/eacpay-core/BRCrypto.c
-             src/main/jni/leacpay-core/BRCrypto.h
+             src/main/jni/eacpay-core/BRCrypto.h
              src/main/jni/eacpay-core/BRInt.h
              src/main/jni/eacpay-core/BRKey.c
              src/main/jni/eacpay-core/BRKey.h
