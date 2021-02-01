@@ -222,7 +222,7 @@ public class DynamicDonationFragment extends Fragment {
 
     private String formatLtcAmount(BigDecimal amount) {
         BigDecimal ltcAmount = BRExchange.getBitcoinForSatoshis(getContext(), amount);
-        return BRCurrency.getFormattedCurrencyString(getContext(), "LTC", ltcAmount);
+        return BRCurrency.getFormattedCurrencyString(getContext(), "EAC", ltcAmount);
     }
 
     private String formatIsoAmount(BigDecimal amount) {
