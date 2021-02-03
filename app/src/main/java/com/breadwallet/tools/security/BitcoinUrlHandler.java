@@ -120,11 +120,11 @@ public class BitcoinUrlHandler {
 
         String tmp = str.trim().replaceAll("\n", "").replaceAll(" ", "%20");
 
-        if (!tmp.startsWith("litecoin://")) {
-            if (!tmp.startsWith("litecoin:"))
-                tmp = "litecoin://".concat(tmp);
+        if (!tmp.startsWith("earthcoin://")) {
+            if (!tmp.startsWith("earthcoin:"))
+                tmp = "earthcoin://".concat(tmp);
             else
-                tmp = tmp.replace("litecoin:", "litecoin://");
+                tmp = tmp.replace("earthcoin:", "litecoin://");
         }
         URI uri;
         try {
@@ -204,7 +204,7 @@ public class BitcoinUrlHandler {
                 BRAnimator.killAllFragments(app);
                 BRSender.getInstance().sendTransaction(app, new PaymentItem(addresses, null, new BigDecimal(amount).longValue(), null, true));
             } else {
-                Timber.e(new NullPointerException("tryBitcoinURL, app is null!"));
+                Timber.e(new NullPointerException("tryearthcoinURL, app is null!"));
             }
         }
 
