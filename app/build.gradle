@@ -26,11 +26,11 @@ android {
     compileSdkVersion = 29
     defaultConfig {
         testInstrumentationRunner = 'androidx.test.runner.AndroidJUnitRunner'
-        applicationId = 'com.loafwallet'
+        applicationId = 'EACPAY.COM'
         minSdkVersion 23
         targetSdkVersion 29
         versionCode 613
-        versionName "v1.19.4"
+        versionName "v2.0.1"
         multiDexEnabled true
 
         // Similar to other properties in the defaultConfig block,
@@ -67,9 +67,9 @@ android {
     flavorDimensions "mode"
     productFlavors {
         loaf {
-            applicationId "com.loafwallet"
+            applicationId "EACPAY.COM"
             dimension "mode"
-            resValue "string", "app_name", "Litewallet"
+            resValue "string", "app_name", "EACPAY"
             buildConfigField "boolean", "LITECOIN_TESTNET", "false"
 
             externalNativeBuild {
@@ -118,7 +118,7 @@ android {
         // To enable checks for only a subset of issue IDs and ignore all others,
         // list the issue IDs with the 'check' property instead. This property overrides
         // any issue IDs you enable or disable using the properties above.
-        check 'NewApi', 'InlinedApi'
+        checkOnly 'NewApi', 'InlinedApi'
     }
 
     buildTypes {
