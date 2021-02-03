@@ -124,7 +124,7 @@ public class BitcoinUrlHandler {
             if (!tmp.startsWith("earthcoin:"))
                 tmp = "earthcoin://".concat(tmp);
             else
-                tmp = tmp.replace("earthcoin:", "litecoin://");
+                tmp = tmp.replace("earthcoin:", "earthcoin://");
         }
         URI uri;
         try {
