@@ -739,7 +739,7 @@
   <!-- 1 of 3 -->
   <string name="WritePaperPhrase.step">%1$d of %2$d</string>
 
-    <string name="Donate.title">Donate to the Earthcoin Foundation (%1$s)</string>
+    <string name="Donate.title">Donate to the Eacpay Developer (%1$s)</string>
 
     <string name="Confirmation.processingAndDonationTime">Processing time: These transactions will take %1$s minutes to process.</string>
     <string name="Donate.title.confirmation">Confirm Donation</string>
