@@ -132,8 +132,8 @@ public class BRConstants {
      */
     public static final Pair[] DONATION_ADDRESSES = new Pair[]
             {
-                    Pair.create("Litewallet Hardware Fundraiser", "MJ4W7NZya4SzE7R6xpEVdamGCimaQYPiWu"),
-                    Pair.create("Litecoin Foundation", "MVZj7gBRwcVpa9AAWdJm8A3HqTst112eJe")
+                    Pair.create("Eacpay Hardware Fundraiser", "eU1DkXy9Td9M2eSJGZqxiKgoQNjXS3Azck"),
+                    Pair.create("Earthcoin Foundation", "eS5KD8xF4QLmCWFJBsbMhB16TtpJyiqtLp")
             };
     public static final long DONATION_AMOUNT = 1_800_000;
 
