@@ -30,6 +30,7 @@
 #include <BRPaymentProtocol.h>
 #include <BRBIP39Mnemonic.h>
 #include "BRPaymentProtocol.h"
+#include <BRTransaction.h>                // may work without this line - please, try
 
 //
 // Created by Mihail Gutan on 9/24/15.
@@ -104,6 +105,8 @@ Java_com_breadwallet_tools_security_BitcoinUrlHandler_parsePaymentRequest(JNIEnv
         (*env)->SetIntField(env, entity, jerror, 1);
         return entity;
     }
+  
+    BRTransactionSetMessage(tx, nativeRequest->details->memo, strlen(nativeRequest->details->memo) );   // copy memo into txComment
 
     uint64_t feeForTx = BRWalletFeeForTx(_wallet, tx);
     uint64_t amountToBeSent =
