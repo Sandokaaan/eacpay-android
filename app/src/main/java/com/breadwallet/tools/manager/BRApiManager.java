@@ -183,7 +183,7 @@ public class BRApiManager {
     }
 
     public static void updateFeePerKb(Context app) {
-        String jsonString = "{\"fee_per_kb\":\"10000\",\"fee_per_kb_economy\":\"2500\",\"fee_per_kb_luxury\":\"20000\"}";
+        String jsonString = "{\"fee_per_kb\":\"1000000\",\"fee_per_kb_economy\":\"500000\",\"fee_per_kb_luxury\":\"2000000\"}";
         if (jsonString == null || jsonString.isEmpty()) {
             Timber.i("updateFeePerKb: failed to update fee, response string: %s", jsonString);
             return;
