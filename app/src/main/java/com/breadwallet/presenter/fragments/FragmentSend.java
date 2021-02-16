@@ -430,7 +430,9 @@ public class FragmentSend extends Fragment {
 
                 //get amount in satoshis from any isos
                 BigDecimal bigAmount = new BigDecimal(Utils.isNullOrEmpty(amountStr) ? "0" : amountStr);
-                BigDecimal satoshiAmount = BRExchange.getSatoshisFromAmount(getActivity(), iso, bigAmount);
+                BigDecimal satoshiAmount = selectedIso.equalsIgnoreCase("eac") ? 
+                    BRExchange.getSatoshisForBitcoin(getActivity(), bigAmount :
+                    BRExchange.getSatoshisFromAmount(getActivity(), selectedIso, bigAmount);
 
                 if (address.isEmpty() || !BRWalletManager.validateAddress(address)) {
                     allFilled = false;
@@ -648,7 +650,9 @@ public class FragmentSend extends Fragment {
         isoButton.setText(String.format("%s(%s)", BRCurrency.getCurrencyName(getActivity(), selectedIso), currencySymbol));
         //Balance depending on ISO
         long satoshis = (Utils.isNullOrEmpty(tmpAmount) || tmpAmount.equalsIgnoreCase(".")) ? 0 :
-                (selectedIso.equalsIgnoreCase("btc") ? BRExchange.getSatoshisForBitcoin(getActivity(), new BigDecimal(tmpAmount)).longValue() : BRExchange.getSatoshisFromAmount(getActivity(), selectedIso, new BigDecimal(tmpAmount)).longValue());
+            (selectedIso.equalsIgnoreCase("eac") ? 
+                BRExchange.getSatoshisForBitcoin(getActivity(), new BigDecimal(tmpAmount)) : 
+                BRExchange.getSatoshisFromAmount(getActivity(), selectedIso, new BigDecimal(tmpAmount)) );
         BigDecimal balanceForISO = BRExchange.getAmountFromSatoshis(getActivity(), iso, new BigDecimal(curBalance));
         Timber.d("updateText: balanceForISO: %s", balanceForISO);
 
