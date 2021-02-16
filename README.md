@@ -59,9 +59,9 @@ Simplicity and ease-of-use is **Eacpay wallet**'s core design principle. A simpl
 
 ### Building & Developing Eacpay wallet for Android: 
 
-1. Download and install Java 7 or up
-2. Download and install the latest Android studio
-3. Download NDK r15c from the [NDK Archives](https://developer.android.com/ndk/downloads/older_releases.html)
+1. Download and install Java 7 or up,Java 8 is recommended
+2. Download and install the latest Android studio 4.1.2
+3. Download NDK 21 from the [NDK Archives](https://developer.android.com/ndk/downloads/older_releases.html)
 4. Clone this repo & init submodules
 ```bash
 $ git clone https://github.com/vcexnet/eacpay-android
@@ -70,7 +70,7 @@ $ git submodule init
 $ git submodule update
 ```
 5. Open the project with Android Studio, navigate to `File > Project Structure > SDK Location`
-6. Change `Android NDK Location` with the path to NDK r15c that you downloaded earlier
+6. Change `Android NDK Location` with the path to NDK 21 that you downloaded earlier(eacpay-android/local.properties Specify the SDK path and NDK version in the file)
 7. Go to SDK Manager and download all the SDK Platforms and SDK Tools
 9. Build -> Rebuild Project
 
