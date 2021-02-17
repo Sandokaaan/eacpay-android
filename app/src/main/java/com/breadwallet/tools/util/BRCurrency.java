@@ -56,7 +56,7 @@ public class BRCurrency {
         String symbol = null;
         decimalFormatSymbols = currencyFormat.getDecimalFormatSymbols();
 //        int decimalPoints = 0;
-        if (Objects.equals(isoCurrencyCode, "EAC")) {
+        if (isoCurrencyCode.equalsIgnoreCase("EAC")) {
             symbol = BRExchange.getBitcoinSymbol(app);
         } else {
             try {
@@ -79,7 +79,7 @@ public class BRCurrency {
 
     public static String getSymbolByIso(Context app, String iso) {
         String symbol;
-        if (Objects.equals(iso, "EAC")) {
+        if (iso.equalsIgnoreCase("EAC")) {
             String currencySymbolString = BRConstants.bitcoinLowercase;
             if (app != null) {
                 int unit = BRSharedPrefs.getCurrencyUnit(app);
@@ -110,7 +110,7 @@ public class BRCurrency {
 
     //for now only use for BTC and Bits
     public static String getCurrencyName(Context app, String iso) {
-        if (Objects.equals(iso, "EAC")) {
+        if (iso.equalsIgnoreCase("EAC")) {
             if (app != null) {
                 int unit = BRSharedPrefs.getCurrencyUnit(app);
                 switch (unit) {
