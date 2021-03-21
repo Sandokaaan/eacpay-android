@@ -29,6 +29,8 @@
 #include <android/log.h>
 #include "BRMerkleBlock.h"
 #include "BRWallet.h"
+#include "BRChainParams.h"
+#include "BRPeerManager.h"
 #include "wallet.h"
 #include <pthread.h>
 #include <BRBase58.h>
@@ -291,7 +293,7 @@ Java_com_breadwallet_wallet_BRPeerManager_create(JNIEnv *env, jobject thiz,
         if (earliestKeyTime < BIP39_CREATION_TIME) earliestKeyTime = BIP39_CREATION_TIME;
         __android_log_print(ANDROID_LOG_DEBUG, "Message from C: ", "earliestKeyTime: %d",
                             earliestKeyTime);
-        _peerManager = BRPeerManagerNew(_wallet, (uint32_t) earliestKeyTime, _blocks,
+        _peerManager = BRPeerManagerNew(&BRMainNetParams, _wallet, (uint32_t) earliestKeyTime, _blocks,
                                         (size_t) blocksCount,
                                         _peers, (size_t) peersCount);
         BRPeerManagerSetCallbacks(_peerManager, NULL, syncStarted, syncStopped,
@@ -459,7 +461,7 @@ JNIEXPORT jboolean JNICALL Java_com_breadwallet_wallet_BRPeerManager_setFixedPee
         if (inet_pton(AF_INET, host, &addr) != 1) return JNI_FALSE;
         address.u16[5] = 0xffff;
         address.u32[3] = addr.s_addr;
-        if (port == 0) _port = STANDARD_PORT;
+        if (port == 0) _port = BRMainNetParams.standardPort;
     } else {
         _port = 0;
     }
