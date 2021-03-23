@@ -541,7 +541,7 @@ Java_com_breadwallet_wallet_BRWalletManager_feeForTransactionAmount(JNIEnv *env,
 
 JNIEXPORT jbyteArray JNICALL
 Java_com_breadwallet_wallet_BRWalletManager_tryTransaction(JNIEnv *env, jobject obj,
-                                                           jstring jAddress, jlong jAmount) {
+                                                           jstring jAddress, jlong jAmount, jstring jComment) {
     __android_log_print(ANDROID_LOG_DEBUG, "Message from C: ", "tryTransaction");
     if (!_wallet) return 0;
 
@@ -549,6 +549,15 @@ Java_com_breadwallet_wallet_BRWalletManager_tryTransaction(JNIEnv *env, jobject 
     BRTransaction *tx = BRWalletCreateTransaction(_wallet, (uint64_t) jAmount, rawAddress);
 
     if (!tx) return NULL;
+
+    // add comment, limit to 200 characters - as jString is 16-bit value, it is up to 400 bytes = current network limit
+    jsize jCommentSizeLimit = 200;
+    jsize jCommentSize = (*env)->GetStringLength(env, jComment);
+    if ( jCommentSize > jCommentSizeLimit)
+        jCommentSize = jCommentSizeLimit;
+    jstring limitedComment = (*env)->NewString(env,(*env)->GetStringChars(env, jComment, NULL), jCommentSize);
+    const char *cStringComment = (*env)->GetStringUTFChars(env, limitedComment, NULL);
+    BRTransactionSetMessage(tx, cStringComment, strlen(cStringComment));
 
     size_t len = BRTransactionSerialize(tx, NULL, 0);
     uint8_t *buf = malloc(len);
