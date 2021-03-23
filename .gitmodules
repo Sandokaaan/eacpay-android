@@ -1,7 +1,3 @@
-[submodule "app/src/main/jni/eacpay-core"]
-	path = app/src/main/jni/eacpay-core
-	url = https://github.com/Sandokaaan/eacpay-core
-	branch = master
 [submodule "app/src/main/secp/secp256k1"]
 	path = app/src/main/secp/secp256k1
 	url = https://github.com/bitcoin-core/secp256k1.git
