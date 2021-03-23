@@ -118,7 +118,7 @@ android {
         // To enable checks for only a subset of issue IDs and ignore all others,
         // list the issue IDs with the 'check' property instead. This property overrides
         // any issue IDs you enable or disable using the properties above.
-        checkOnly 'NewApi', 'InlinedApi'
+        // checkOnly 'NewApi', 'InlinedApi'
     }
 
     buildTypes {
